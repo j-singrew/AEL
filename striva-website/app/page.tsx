@@ -104,27 +104,14 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:hello@strivasoftware.co.za?subject=Project%20Inquiry"
+              href="mailto:hello@strivasoftware.co.za?subject=Project%20Inquiry%20-%20Striva%20Software"
               className="bg-[#0D9E8A] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#0D9E8A]/90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#0D9E8A]/25 inline-block"
-              onClick={() => {
-                console.log('Opening email client for project inquiry');
-                // Fallback for browsers that block mailto
-                setTimeout(() => {
-                  window.location.href = 'mailto:hello@strivasoftware.co.za?subject=Project%20Inquiry';
-                }, 100);
-              }}
             >
               Start a Project
             </a>
             <a
-              href="mailto:hello@strivasoftware.co.za?subject=General%20Inquiry"
+              href="mailto:hello@strivasoftware.co.za?subject=General%20Inquiry%20-%20Striva%20Software"
               className="border border-[#0D9E8A] text-[#0D9E8A] px-8 py-4 rounded-lg font-semibold hover:bg-[#0D9E8A] hover:text-white transition-all duration-300 transform hover:scale-105 inline-block"
-              onClick={() => {
-                // Fallback for browsers that block mailto
-                setTimeout(() => {
-                  window.location.href = 'mailto:hello@strivasoftware.co.za?subject=General%20Inquiry';
-                }, 100);
-              }}
             >
               General Inquiry
             </a>
@@ -134,12 +121,6 @@ export default function Home() {
             <a
               href="mailto:hello@strivasoftware.co.za"
               className="text-[#0D9E8A] hover:text-[#0D9E8A]/80 transition-colors"
-              onClick={() => {
-                // Fallback for browsers that block mailto
-                setTimeout(() => {
-                  window.location.href = 'mailto:hello@strivasoftware.co.za';
-                }, 100);
-              }}
             >
               hello@strivasoftware.co.za
             </a>

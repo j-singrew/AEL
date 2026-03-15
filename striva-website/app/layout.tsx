@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   description: "Professional software development agency specializing in API & Backend, Web Platforms, and B2B Products.",
   keywords: "software development, API, backend, web platforms, B2B products, South Africa",
   authors: [{ name: "Striva Software" }],
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   openGraph: {
     title: "Striva Software - Building software that matters",
     description: "Professional software development agency specializing in API & Backend, Web Platforms, and B2B Products.",

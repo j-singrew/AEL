@@ -12,12 +12,6 @@ export default function Footer() {
             <a
               href="mailto:hello@strivasoftware.co.za"
               className="text-[#0D9E8A] hover:text-[#0D9E8A]/80 transition-colors text-sm"
-              onClick={() => {
-                // Fallback for browsers that block mailto
-                setTimeout(() => {
-                  window.location.href = 'mailto:hello@strivasoftware.co.za';
-                }, 100);
-              }}
             >
               hello@strivasoftware.co.za
             </a>
