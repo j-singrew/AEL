@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://strivasoftware.co.za/sitemap.xml
