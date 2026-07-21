@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logoImg from "@/imports/Screenshot_2026-07-11_at_20.12.12.png";
+import logoImg from "@/imports/logo.png";
 
 const NAV_LINKS = [
   "Research",
