@@ -12,9 +12,11 @@ class BinarySearchTree:
     def __init__(self):
         self.root = None
 
+
     def add_suburb(self, suburb):
 
         new_node = SuburbNode(suburb)
+
 
         if self.root is None:
             self.root = new_node
@@ -84,14 +86,15 @@ suburbs = [
     "Milnerton",
     "Parow",
     "Stellenbosch"
+
 ]
 
 for suburb in suburbs:
     bst.add_suburb(suburb)
-
-
-bst.in_order_traversal(bst.root)
-
-
-print( bst.find_suburb("Bellville"))
-print( bst.find_suburb("Observatory"))
+print()
+print("in_order_traversal")
+print()
+print(bst.in_order_traversal(bst.root))
+print()
+print("Searching for Bellville: ", bst.find_suburb("Bellville"))
+print("Searching for Observatory: ", bst.find_suburb("Observatory"))

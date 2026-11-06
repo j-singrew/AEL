@@ -4,6 +4,7 @@
 
 class Hash:
 
+    DELETED = object()
 
     def __init__(self):
         self.size = 10
@@ -45,7 +46,7 @@ class Hash:
     def get_suburb(self,key):
 
         index = self.hashing(key)
-        counter = 0
+        counter = 0s
 
         while self.table[index] is not None:
             
@@ -57,18 +58,29 @@ class Hash:
             index = (index + 1) % self.size
             counter +=1
 
-        return None
+        return 
 
 
-    def suburb_name_change(self,suburb_name,name_change):
+    def remove_suburb(self, suburb_name):
 
         index = self.get_suburb(suburb_name)
 
-        if index != None:
-            self.table[index] = name_change
+        if index is None:
+            return False
 
+        self.table[index] = self.DELETED
 
         return self.table
+
+        
+
+
+
+
+
+
+
+
 
 
 
@@ -83,28 +95,32 @@ class Hash:
 
 hsh = Hash()
 
-sub_1 = "milan"
-sub_2 ="florida"
-sub_3 = "birmingam"
 
-sub_4 = "lagos"
-sub_5 ="abuja"
-sub_6 = "kinchasa"
+sub_1 = "Milan"
+sub_2 ="Florida"
+sub_3 = "Birmingam"
 
-sub_7 = "kuils river"
-sub_8 ="delft"
-sub_9 = "paarl"
+sub_4 = "Midrand"
+sub_5 ="Mbweni"
+sub_6 = "Durbanville"
+
+sub_7 = "Kuils river"
+sub_8 ="Delft"
+sub_9 = "Hoefroem"
 
 
-sub_10 = "kur"
-sub_11="de"
+sub_10 = "Westbridge"
+sub_11="Hoeg en droeg"
+
 
 suburbs = [ sub_1 ,sub_2,sub_3,sub_4,sub_5,sub_6,sub_7,sub_8,sub_9,sub_10,sub_11]
 for suburbia in suburbs:
     hsh.add_suburb(suburbia)
 
 print()
+print("Initial suburb table")
 print(hsh.get_table())
 print()
-print(hsh.suburb_name_change("milan","china"))
-
+print("Delete suburb Birmingam")
+print(hsh.remove_suburb("Birmingam"))
+print()

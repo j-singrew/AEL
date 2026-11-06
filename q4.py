@@ -2,7 +2,7 @@
 
 
 
-class Hash:
+class SuburbHash:
 
 
     def __init__(self):
@@ -13,7 +13,7 @@ class Hash:
 
     def hashing(self,suburb):
 
-        hsh =hash(suburb)% len(self.table)
+        hsh=hash(suburb)% len(self.table)
         return hsh
 
 
@@ -45,7 +45,6 @@ class Hash:
     def get_suburb(self,key):
 
         index = self.hashing(key)
-        print("This index",index)
         counter = 0
 
         while self.table[index] is not None:
@@ -60,6 +59,20 @@ class Hash:
 
         return None
 
+    def get_sorted_table(self):
+
+        table = self.get_table()
+
+        return sorted(table)
+
+
+
+
+
+
+
+
+
 
 
         
@@ -75,33 +88,44 @@ class Hash:
 
 
 
-hsh = Hash()
+hsh = SuburbHash()
 
-sub_1 = "milan"
-sub_2 ="florida"
-sub_3 = "birmingam"
+sub_1 = "Milan"
+sub_2 ="Florida"
+sub_3 = "Birmingam"
 
-sub_4 = "lagos"
-sub_5 ="abuja"
-sub_6 = "kinchasa"
+sub_4 = "Midrand"
+sub_5 ="Mbweni"
+sub_6 = "Durbanville"
 
-sub_7 = "kuils river"
-sub_8 ="delft"
-sub_9 = "paarl"
+sub_7 = "Kuils river"
+sub_8 ="Delft"
+sub_9 = "Hoefroem"
 
 
-sub_10 = "kur"
-sub_11="de"
-"""
+sub_10 = "Westbridge"
+sub_11="Hoeg en droeg"
 
-sub_12= "p"
-"""
 suburbs = [ sub_1 ,sub_2,sub_3,sub_4,sub_5,sub_6,sub_7,sub_8,sub_9,sub_10,sub_11]
 for suburbia in suburbs:
     hsh.add_suburb(suburbia)
 
+print()
+print("Get table",hsh.get_table())
+print()
+print("The table size is ",hsh.size)
 
+
+print()
+print("Mbweni index ",hsh.get_suburb("Mbweni"))
+print()
+
+
+print("Sorted list ")
+print("Input row")
+print()
 print(hsh.get_table())
-print(hsh.get_suburb("milan"))
-
-
+print()
+print("Output row")
+print()
+print(hsh.get_sorted_table())
