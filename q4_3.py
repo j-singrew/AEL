@@ -46,7 +46,7 @@ class Hash:
     def get_suburb(self,key):
 
         index = self.hashing(key)
-        counter = 0s
+        counter = 0
 
         while self.table[index] is not None:
             
@@ -123,4 +123,7 @@ print(hsh.get_table())
 print()
 print("Delete suburb Birmingam")
 print(hsh.remove_suburb("Birmingam"))
+print()
+print("Deletion test Birmingam")
+print(hsh.get_suburb("Birmingam"))
 print()
